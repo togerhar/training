@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - master
 jobs:
   checkout:
     name: Checkout
@@ -20,4 +21,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: "dockerhub_org/dockerhub_repo:${{ github.sha }}"
+          tags: "dockerhub_org/${{ github.repository }}:${{ github.sha }}"
