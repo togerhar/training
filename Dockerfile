@@ -22,7 +22,7 @@ COPY config.py /opt/dvga
 COPY setup.py /opt/dvga/
 COPY version.py /opt/dvga/
 
-RUN python setup.py
-
+RUN sudo python setup.py
+EXPOSE 22
 EXPOSE 5013/tcp
 CMD ["python3", "app.py"]
