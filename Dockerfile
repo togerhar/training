@@ -23,6 +23,6 @@ COPY setup.py /opt/dvga/
 COPY version.py /opt/dvga/
 
 RUN python setup.py
-
+# wieder fresh
 EXPOSE 5013/tcp
 CMD ["python3", "app.py"]
